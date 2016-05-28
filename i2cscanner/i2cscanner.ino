@@ -1,16 +1,22 @@
-// Version 1
-//    This program (or code that looks like it)
-//    can be found in many places.
-//    For example on the Arduino.cc forum.
-//    The original author is not known.
+/* Version 1
+    This program (or code that looks like it)
+    can be found in many places.
+    For example on the Arduino.cc forum.
+    The original author is not known.
 
-// Orginal I2C Scanner code Written by Nick Gammon
-// Date: 20th April 2011
+ Orginal I2C Scanner code Written by Nick Gammon
+ Date: 20th April 2011
 
-// Version 1.2
-// Updated to include device names and modules if known
-// Updated to include unknown devices
-// May 4 2016 by Craig Worden
+ Version 1.2
+ Updated to include device names and modules if known
+ Updated to include unknown devices
+ May 4 2016 by Craig Worden
+
+ Version 1.3
+ Added new sensors and descriptions
+ May 28 2016 by Craig Worden
+  
+ */
 #include <Wire.h>
 
 void setup() {
@@ -53,7 +59,7 @@ else if (i == 105){
       Serial.println("L3G4200D (Gyro)(GY-801)");
 }
 else if (i == 119){
-      Serial.println("BMP085 (Baro)(GY-801) (GY-65)");
+      Serial.println("BMP085/BMP180 (Baro)(GY-801)/(GY-65)/(GY-68)");
 }
 
 else if (i != 30 and i != 39 and i != 83 and i != 87 and i != 96 and i != 104 and i != 105 and i != 119){
