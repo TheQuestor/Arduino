@@ -20,7 +20,7 @@
 #include <Wire.h>
 
 void setup() {
-  Serial.begin (115200);
+  Serial.begin (9600);
   // Leonardo: wait for serial port to connect
   while (!Serial) {
     }
@@ -43,6 +43,9 @@ if (i == 30){
 else if (i == 39){
       Serial.println("4x20 (LCD)");
 }
+else if (i == 63){
+      Serial.println("IIC/I2C Serial Interface Adapter Board for LCD");
+}
 else if (i == 83){
       Serial.println("ADXL345 (Accl) (GY-291)/(GY-801)");
 }
@@ -62,7 +65,7 @@ else if (i == 119){
       Serial.println("BMP085/BMP180 (Baro)(GY-801)/(GY-65)/(GY-68)");
 }
 
-else if (i != 30 and i != 39 and i != 83 and i != 87 and i != 96 and i != 104 and i != 105 and i != 119){
+else if (i != 30 and i != 39 and i != 63 and i != 83 and i != 87 and i != 96 and i != 104 and i != 105 and i != 119){
       Serial.println("Unknown Device");
 }
 
